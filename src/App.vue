@@ -14,10 +14,9 @@ export default {
       message: 'message vue'
     }
   },
-  template: '<users/>',
-  render:h=>h(Users),
   components:{
     'users': Users
   }
+  
 }
 </script>

@@ -31,6 +31,9 @@ module.exports = {
         // new CleanWebpackPlugin(['dist'])
     ],
     resolve: {
-      alias: {vue: 'vue/dist/vue.js'}
+      extensions: ['.js', '.vue'],
+      alias: {
+        'vue$': 'vue/dist/vue.esm.js' //完整版本的vue
+      }
     },
 }
