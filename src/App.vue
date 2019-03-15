@@ -1,22 +1,13 @@
 <template>
-  <div id="add">
-    <h1>{{message}}</h1>
-    <users></users>
-  </div>
+  <h1>{{msg}}</h1>
 </template>
 
 <script>
-import Users from './pages/Users'
-export default {
-  name:'App',
-  data () {
-    return {
-      message: 'message vue'
+  export default {
+    data(){
+      return {
+        msg: 'hellow vje'
+      }
     }
-  },
-  components:{
-    'users': Users
   }
-  
-}
 </script>

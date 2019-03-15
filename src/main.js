@@ -6,12 +6,5 @@ Vue.config.productionTip = false
 
 new Vue({
   el: '#app',
-  data:{
-    name:'george'
-  },
-  template:'<App />',
-  
-  components:{
-    App
-  }
+  render:h=>h(App)
 })

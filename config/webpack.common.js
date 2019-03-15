@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry:{
-        app:'./src/index.js'
+        app:'./src/main.js'
     },
     output:{
         filename:'[name].[hash].js',
@@ -18,16 +18,19 @@ module.exports = {
         {test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']},
         {test: /\.(jpg|jpeg|gif|png|)$/, use: 'url-loader'},
         {test: /\.(ttf|woff2|woff|eot|svg)$/, use: 'url-loader'}, // 处理字体文件
-        {test: /\.vue$/, use: 'vue-loader'},
+        {
+          test: /\.vue$/,
+          loader: 'vue-loader'
+        },
         {test: /\.js$/, use: 'babel-loader', exclude: /node_modules/},
       ]
     },
     plugins:[
         new HtmlWebpackPlugin({
-            template:'template.html',
+            template:'./template.html',
             filename:'index.html'
         }),
-        new VueLoaderPlugin(),
+        new VueLoaderPlugin()
         // new CleanWebpackPlugin(['dist'])
     ],
     resolve: {
